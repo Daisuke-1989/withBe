@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/chrome_favi.png">
+  <title>birdsEye</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item"><button id="Me">Me</button></li>
+        <li class="header__item"><button id="Cheese">Cheese</button></li>
+        <li class="header__item"><button id="Gold">Gold coast</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="Map">
+      <div id="gMap" style="width: 100%; height: 600px"></div>
+    </section>
+    <script src="js/geo.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC58-QTFOoQaHJCR6eUlZwa2lgOBDQX4AQ" async>
+    </script>
+  </main>
+</body>
+</html>

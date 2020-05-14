@@ -1,0 +1,81 @@
+@charset "utf-8";
+*{
+  box-sizing: border-box;
+}
+// font style
+$base_font: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+
+// width
+$base_width: 1200px;
+
+//color
+$white: white;
+$black: #222222;
+$yellow: #ffd61a;
+$glay: #fafafa;
+$border: #cacaca;
+$form:#bfbfbf;
+$footer: #707070;
+
+// font size
+$h1: 28px;
+$mainText: 26px;
+$h2: 24px;
+$nav:21px;
+$h3: 18px;
+$p: 16px;
+$btn: 18px;
+
+
+// mixin
+@mixin wrap{
+  width: $base_width;
+  margin: 0 auto;
+}
+@mixin btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-decoration: none;
+  display: block;
+  width: 300px;
+  height: 60px;
+  background-color: $yellow;
+  color: $white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: $btn;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  border: none;
+  &hover{
+    transition-duration: 1s;
+    transform: scale(1.1);
+  }
+}
+@mixin text($size,$weight,$color,$posi: center){
+  font-size: $size;
+  font-weight: $weight;
+  color:$color;
+  text-align: $posi;
+}
+.header{
+  background-color:$yellow;
+  margin-bottom: 30px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    button{
+      @include btn;
+    }
+  }
+}
+.Map{
+  display: flex;
+  justify-content: center;
+  div{
+    margin: 0 5px;
+  }
+}
